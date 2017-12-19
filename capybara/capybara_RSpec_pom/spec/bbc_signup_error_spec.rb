@@ -29,8 +29,7 @@ describe 'Incorrect details produces valid error' do
       @signup.input_month("10")
       @signup.input_year("1995")
       @signup.submit
-      sleep 3
-      @signup.submit
+      @signup.register
       expect(@signup.email_error_text).to eq "Something's missing. Please check and try again."
       expect(@signup.password_error_text).to eq "Something's missing. Please check and try again."
       expect(@signup.postcode_error_text).to eq "Something's missing. Please check and try again."

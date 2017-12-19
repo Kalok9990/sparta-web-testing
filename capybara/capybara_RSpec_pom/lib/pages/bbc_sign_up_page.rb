@@ -18,7 +18,7 @@ class BbcSignUpPage
   POSTCODE_ERROR_MESSAGE_ID = "form-message-postcode"
   GENDER_ERROR_MESSAGE_ID = "form-message-gender"
   OPTIN_ERROR_MESSAGE_ID = "form-message-marketingOptIn"
-  REGISTER_BUTTON_ID = "submit-button"
+  REGISTER_BUTTON_TEXT = "Register"
 
   def input_day(day)
     fill_in(DAY_INPUT_FIELD_ID, with: day)
@@ -34,6 +34,10 @@ class BbcSignUpPage
 
   def submit
     click_button(SUBMIT_BUTTON_ID)
+  end
+
+  def register
+    click_button(REGISTER_BUTTON_TEXT)
   end
 
   def date_error_text

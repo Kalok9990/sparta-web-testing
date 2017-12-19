@@ -23,7 +23,7 @@ describe 'Correct details input' do
       @signup.input_month("2")
       @signup.input_year("1992")
       @signup.submit
-      @signup.input_email("kalok38645@gmail.com")
+      @signup.input_email("kalok38045@gmail.com")
       @signup.input_password("kalok941")
       @signup.input_postcode("SL6 2BL")
       @signup.select_gender("Male")
