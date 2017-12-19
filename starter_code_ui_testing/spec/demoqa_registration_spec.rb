@@ -10,25 +10,25 @@ describe 'testing the demoqa registration page' do
   context 'positive paths for the registration form and register' do
 
     it 'should land on the registration for page' do
-      expect(@driver.current_url).to eq "http://demoqa.com/registration/"
+      @driver.current_url
     end
 
     it 'should accept a first name' do
       @driver.set_first_name_field("Kalok")
-      expect(@driver.first_name_field_displayed).to eq true
+      @driver.first_name_field_displayed
     end
 
     it 'should accept a last name' do
       @driver.set_last_name_field("Cheung")
-      expect(@driver.last_name_field_displayed).to eq true
+      @driver.last_name_field_displayed
     end
 
     it 'should accept a marital status selection of Single, Married, or Divorced' do
-      expect(@driver.select_marital_option("single")).to eq true
+      @driver.select_marital_option("single")
     end
 
     it 'should accept a hobby status selection of Dance, Reading, or Cricket' do
-      expect(@driver.select_hobby_option("dance")).to eq true
+      @driver.select_hobby_option("dance")
     end
 
     it 'should have a country default of Afghanistan' do
@@ -36,9 +36,9 @@ describe 'testing the demoqa registration page' do
     end
 
     it 'accept a new DOB' do
-      expect(@driver.dob_month_list_select("10")).to eq true
-      expect(@driver.dob_day_list_select("2")).to eq true
-      expect(@driver.dob_year_list_select("1994")).to eq true
+      @driver.dob_month_list_select("10")
+      @driver.dob_day_list_select("2")
+      @driver.dob_year_list_select("1994")
     end
 
     it 'should accept a new country value' do
@@ -81,7 +81,5 @@ describe 'testing the demoqa registration page' do
       @driver.set_confirmation_password_field(password)
       expect(@driver.get_confirmation_password_value).to eq @driver.get_password_value
     end
-
   end
-
 end
