@@ -39,10 +39,6 @@ class BbcSignInPage
     sign_in_button.click
   end
 
-  def register_link
-    find_link(REGISTER_LINK_TEXT)
-  end
-
   def click_register_link
     click_link(REGISTER_LINK_TEXT)
   end
@@ -53,10 +49,6 @@ class BbcSignInPage
 
   def incorrect_password_text
     find(:id, WRONG_PASSWORD_ERROR_ID).text
-  end
-
-  def register_link
-    click_link("Register now")
   end
 
 end

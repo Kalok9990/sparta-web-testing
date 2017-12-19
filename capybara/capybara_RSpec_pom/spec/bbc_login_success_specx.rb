@@ -4,6 +4,10 @@ describe 'Correct user details produces valid error' do
 
   context 'it should correctly login when correct details are input' do
 
+    after(:all) do
+      Capybara.current_session.driver.quit
+    end
+
     it "should login successfully" do
       @bbc_site = BbcSite.new
       @bbc_site.bbc_homepage.visit_home_page

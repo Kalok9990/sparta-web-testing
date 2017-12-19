@@ -11,15 +11,19 @@ describe 'Correct details input' do
       @signup = @bbc_site.bbc_sign_up_page
     end
 
+    after(:all)do
+      Capybara.current_session.driver.quit
+    end
+
     it "should signup successfully" do
       @home.visit_home_page
       @home.click_sign_in_link
-      @signin.register_link
+      @signin.click_register_link
       @signup.input_day("2")
       @signup.input_month("2")
       @signup.input_year("1992")
       @signup.submit
-      @signup.input_email("kalok38745@gmail.com")
+      @signup.input_email("kalok38645@gmail.com")
       @signup.input_password("kalok941")
       @signup.input_postcode("SL6 2BL")
       @signup.select_gender("Male")
@@ -28,6 +32,7 @@ describe 'Correct details input' do
 
       sleep 5
       expect(@signup.signup_success).to eq "Thanks. You're now signed in."
+      sleep 3
     end
   end
 end
