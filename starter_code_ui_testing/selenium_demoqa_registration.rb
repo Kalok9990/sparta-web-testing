@@ -72,7 +72,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.attribute("value") == marital_status
         option.click
-        return option.selected?
       end
     end
   end
@@ -85,7 +84,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.attribute("value") == hobby
         option.click
-        return option.selected?
       end
     end
   end
@@ -106,7 +104,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.text == country
         option.click
-        return option.selected?
       end
     end
   end
