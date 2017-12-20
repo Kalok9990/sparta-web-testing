@@ -72,7 +72,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.attribute("value") == marital_status
         option.click
-        return option.selected?
       end
     end
   end
@@ -85,7 +84,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.attribute("value") == hobby
         option.click
-        return option.selected?
       end
     end
   end
@@ -106,7 +104,6 @@ class SeleniumDemoReg
     all_options.each do |option|
       if option.text == country
         option.click
-        return option.selected?
       end
     end
   end
@@ -118,34 +115,34 @@ class SeleniumDemoReg
   # If no solution then a run through will happen once finished
 
   def dob_month_list_select(month_value)
-    select = @chrome_driver.find_element(:id, DOB_MONTH_DROPDOWN_LIST).click
-    all_options = @chrome_driver.find_elements(:tag_name, "option")
+    select = @chrome_driver.find_element(:id, DOB_MONTH_DROPDOWN_LIST)
+    select.click
+    all_options = select.find_elements(:tag_name, "option")
     all_options.each do |option|
       if option.text == month_value
         option.click
-        return option.selected?
       end
     end
   end
 
   def dob_day_list_select(day_value)
-    select = @chrome_driver.find_element(:id, DOB_DAY_DROPDOWN_LIST).click
-    all_options = @chrome_driver.find_elements(:tag_name, "option")
+    select = @chrome_driver.find_element(:id, DOB_DAY_DROPDOWN_LIST)
+    select.click
+    all_options = select.find_elements(:tag_name, "option")
     all_options.each do |option|
       if option.text == day_value
         option.click
-        return option.selected?
       end
     end
   end
 
   def dob_year_list_select(year_value)
-    select = @chrome_driver.find_element(:id, DOB_YEAR_DROPDOWN_LIST).click
-    all_options = @chrome_driver.find_elements(:tag_name, "option")
+    select = @chrome_driver.find_element(:id, DOB_YEAR_DROPDOWN_LIST)
+    select.click
+    all_options = select.find_elements(:tag_name, "option")
     all_options.each do |option|
       if option.text == year_value
         option.click
-        return option.selected?
       end
     end
   end
@@ -221,5 +218,5 @@ class SeleniumDemoReg
   end
 end
 
-x = SeleniumDemoReg.new
+# x = SeleniumDemoReg.new
 # p x.get_selected_country
