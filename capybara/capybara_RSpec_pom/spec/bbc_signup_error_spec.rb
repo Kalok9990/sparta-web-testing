@@ -13,7 +13,7 @@ describe 'Incorrect details produces valid error' do
       @homepage.click_sign_in_link
     end
 
-    after(:each) do
+    after(:all) do
       Capybara.current_session.driver.quit
     end
 

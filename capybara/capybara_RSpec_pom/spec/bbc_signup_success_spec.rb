@@ -4,18 +4,15 @@ describe 'Correct details input' do
 
   context 'it should correctly signup when correct details are input' do
 
-    before(:each) do
-      @bbc_site = BbcSite.new
-      @home = @bbc_site.bbc_homepage
-      @signin = @bbc_site.bbc_sign_in_page
-      @signup = @bbc_site.bbc_sign_up_page
-    end
-
     after(:all)do
       Capybara.current_session.driver.quit
     end
 
     it "should signup successfully" do
+      @bbc_site = BbcSite.new
+      @home = @bbc_site.bbc_homepage
+      @signin = @bbc_site.bbc_sign_in_page
+      @signup = @bbc_site.bbc_sign_up_page
       @home.visit_home_page
       @home.click_sign_in_link
       @signin.click_register_link
@@ -23,7 +20,8 @@ describe 'Correct details input' do
       @signup.input_month("2")
       @signup.input_year("1992")
       @signup.submit
-      @signup.input_email("kalok38045@gmail.com")
+      # remember to change email before testing
+      @signup.input_email("kalok38145@gmail.com")
       @signup.input_password("kalok941")
       @signup.input_postcode("SL6 2BL")
       @signup.select_gender("Male")
