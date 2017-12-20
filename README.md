@@ -22,12 +22,12 @@ See following documents for more information on the following tools.
 
 ## Run the tests
 
-To run the tests, in the terminal, make sure are in the root folder and then enter the command.
+To run the tests, in the terminal, make sure are in the folder that you want to test, with the folder 'spec' in, and then enter the command.
 ```
 rspec
 ```
 
-This will automatically run the tests that have been defined in this folder.
+This will automatically run the tests that have been defined in that folder.
 
 ## How to add tests
 
