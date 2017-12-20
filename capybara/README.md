@@ -21,3 +21,7 @@ In the file, you will need to require it as well.
 ```Ruby
 require 'capybara'
 ```
+
+## Before Use
+
+When using the repository, for the folder, within the file 'bbc_signup_success_spec.rb', change the email before running as rspec as the previous email has most likely been used already to test if the sign up works.
