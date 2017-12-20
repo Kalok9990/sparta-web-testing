@@ -19,3 +19,32 @@ See following documents for more information on the following tools.
   - http://www.rubydoc.info/github/jnicklas/capybara
   - https://gist.github.com/zhengjia/428105
   - https://github.com/teamcapybara/capybara
+
+## Run the tests
+
+To run the tests, in the terminal, make sure are in the root folder and then enter the command.
+```
+rspec
+```
+
+This will automatically run the tests that have been defined in this folder.
+
+## How to add tests
+
+In the spec folder, you will see all the files that contain the tests. To make a new file, you will need to make sure that there is spec in the file name (ie 'name_spec.rb'). In the file you will need to require spec_helper and below is a general format of how the tests are made.
+
+```Ruby
+require 'spec_helper'
+
+describe Name_of_Application do
+
+  context 'Description of what you are trying to test' do
+
+    it "description of what the test is for" do
+
+    end
+  end
+end
+```
+
+The `it` block is where the majority of test code is written in. you can have as many `it` blocks as you want, where each one runs a different test.
