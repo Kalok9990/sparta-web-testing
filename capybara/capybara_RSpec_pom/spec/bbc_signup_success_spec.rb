@@ -21,7 +21,7 @@ describe 'Correct details input' do
       @signup.input_year("1992")
       @signup.submit
       # remember to change email before testing
-      @signup.input_email("kalok38145@gmail.com")
+      @signup.input_email("kalok384545@gmail.com")
       @signup.input_password("kalok941")
       @signup.input_postcode("SL6 2BL")
       @signup.select_gender("Male")

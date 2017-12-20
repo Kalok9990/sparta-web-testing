@@ -1,9 +1,11 @@
 require 'capybara'
 
+# initiates the driver
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
+#new instance of the session
 session = Capybara::Session.new(:chrome)
 
 session.visit("http://toolsqa.com/automation-practice-form/")
