@@ -6,6 +6,8 @@ There are two folders, one where Selenium was used to test the User Interface (U
 
 For more information on each folder, go into the folder and there are more README documents within.
 
+All these files require the gem rspec.
+
 ## Documents
 
 See following documents for more information on the following tools.
